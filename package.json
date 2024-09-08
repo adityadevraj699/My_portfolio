@@ -1,0 +1,20 @@
+{
+  "name": "my_portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "my_portfolio": "file:"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}

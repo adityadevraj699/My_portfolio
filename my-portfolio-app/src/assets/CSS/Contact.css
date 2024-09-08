@@ -1,0 +1,96 @@
+/* General Styles */
+.contact-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    height: auto;
+    margin-top: 5rem;
+    width: 80vw;
+    box-sizing: border-box;
+    box-shadow:0 3px 3px 2px black;
+    border-radius: 35px;
+    
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #2dd83b;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid  #48ef0b;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: aliceblue;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+}

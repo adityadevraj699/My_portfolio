@@ -1,0 +1,139 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* src/App.css */
+
+/* Resetting some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode */
+body.light-mode {
+  background-color: whitesmoke;
+  color: #333;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+
+
+/* Basic styling for the navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Styling for the navbar links */
+.navbar-nav .nav-link {
+  transition: color .2s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Styling for the theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    background-color: inherit;
+  }
+}
+
+
+
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #1f8ef1;
+  --secondary-color: #f1c40f;
+}
+
+body.light-mode {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+}
+
+.nav-link {
+  color: var(--navbar-text);
+}
+
+

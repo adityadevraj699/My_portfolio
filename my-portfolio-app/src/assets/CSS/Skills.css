@@ -1,0 +1,129 @@
+/* src/components/SkillSection.css */
+*{
+    user-select: none;
+}
+#skills {
+    padding: 4rem 0;
+    background-color: #f4f4f4;
+    width: 80vw;
+    height: calc(100vh - 200px); /* Adjust based on your header height */
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    border-radius: 35px;
+    box-shadow:0 3px 3px 2px black;
+}
+
+.container {
+    width: 90%;
+     /* Ensure the container is responsive and centered */
+     height: auto;
+    padding: 3rem 1rem;
+    box-sizing: border-box; /* Ensure padding is included in the container's width */
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+}
+.container h2{
+    color: black;
+}
+
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill p {
+    margin: 0 0 0.2rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 1.5rem; /* Fixed height */
+    width: 100%; /* Full width */
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-percentage {
+    background-color: #4caf50; /* Green color for filled percentage */
+    height: 100%; /* Full height */
+    width: 0; /* Start with 0 width and animate */
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 2s ease-in-out;
+    text-align: center;
+    line-height: 1.5rem; /* Align text vertically */
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-percentage::after {
+    content: attr(data-percentage); /* Display the percentage inside the bar */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #skills{
+        height: 80%;
+       
+    }
+    .skill p {
+        font-size: 1rem; /* Slightly smaller font size on tablets */
+    }
+
+    .skill-bar {
+        height: 1.25rem; /* Adjust height for smaller screens */
+    }
+
+    .skill-percentage {
+        line-height: 1.25rem; /* Align text vertically */
+    }
+    
+}
+
+@media (max-width: 480px) {
+    #skills{
+        height: 70%;
+    }
+    .skill p {
+        font-size: 0.9rem; /* Smaller font size on mobile devices */
+    }
+
+    .skill-bar {
+        height: 1rem; /* Adjust height for mobile screens */
+    }
+
+    .skill-percentage {
+        line-height: 1rem; /* Align text vertically */
+    }
+}
+
+@media (max-height : 690px){
+    
+    .skill{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .skill-bar{
+        width: 80%;
+    }
+}

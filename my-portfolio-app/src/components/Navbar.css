@@ -1,0 +1,181 @@
+/* Basic styling for the navbar container */
+/* Light mode styling */
+*{
+  user-select: none;
+}
+body.light-mode .navbar {
+  --navbar-bg: rgb(255, 255, 255); /* Set background color to white in light mode */
+  --navbar-text: #333333;
+}
+
+body.light-mode .nav-link {
+  color: #333333;
+}
+
+body.light-mode .theme-toggle-item {
+  color: #333333;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--navbar-bg); /* Use the CSS variable for background color */
+  color: var(--navbar-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Styling for the navbar left side */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  padding: 0rem 0.5rem;
+}
+
+/* Styling for the navbar logo */
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-style:italic;
+  color: var(--navbar-text);
+  text-transform: uppercase; /* Add text transform for a stylish effect */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Styling for the navbar right side */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+
+/* Styling for the navbar links container */
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto; /* Align items to the right */
+  padding: 0 5%; /* Add 5% horizontal padding to the navbar container */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 1%; /* Add 1% padding to the link section */
+  list-style: none; /* Remove dots from list */
+}
+
+.nav-links li {
+  padding: 0 1rem; /* Add padding to each link item */
+}
+
+.nav-link {
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none; /* Remove underline */
+  color: var(--navbar-text);
+  transition: color 0.1s ease; /* Smooth transition effect for color */
+}
+
+/* Hover effect for navbar links */
+.nav-link:hover {
+  color: #4caf50;
+  font-weight: bold;
+  letter-spacing: 5%;
+  transform: scale(1.1); /* Optional: Slight scale effect on hover */
+}
+
+/* Styling for the theme toggle button */
+.theme-toggle-item {
+  margin-right: 0%; /* 0% margin from the right */
+  background: none;
+  border: none;
+  color: var(--navbar-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-left: 1rem;
+}
+
+/* Dark mode styling */
+body.dark-mode .navbar {
+  --navbar-bg: #2c2c2c; /* Set background color to dark gray in dark mode */
+  --navbar-text: #f1f1f1;
+}
+
+body.dark-mode .nav-link {
+  color: #f1f1f1;
+}
+
+body.dark-mode .theme-toggle-item {
+  color: #f1f1f1;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 900px) {
+  .navbar-nav {
+    display: none; /* Hide links by default */
+    position: fixed;
+    top: 60px; /* Adjust based on the navbar height */
+    right: 0;
+    width: 100%;
+    height: 40%;
+    background-color: var(--navbar-bg);
+    padding: .1em;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-nav.show {
+    display: flex; /* Show links when opened */
+  }
+
+  .navbar-toggler {
+    display: block; /* Show the toggle button on mobile */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--navbar-text);
+    padding: 0.6rem 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  .navbar-toggler-icon {
+    font-size: 1.5rem;
+  }
+
+  .theme-toggle-item {
+    margin: 1rem auto; /* Center the theme toggle in mobile view */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0%; /* Add 5% padding to the link section */
+  }
+
+  .nav-links li {
+    padding: 0rem;
+    width: 100%;
+    text-align: center; /* Center text for mobile view */
+  }
+}
+
+/* Hide the menu bar and close icon on tablets and larger screens */
+@media (min-width: 901px) {
+  .navbar-toggler {
+    display: none; /* Hide the toggle button on tablets and larger screens */
+  }
+}
+
+

@@ -1,0 +1,145 @@
+*{
+    user-select: none;
+  }
+
+  /* General Styles */
+.about {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    height: auto;
+    margin-top: 5rem;
+    width: 80vw;
+    box-sizing: border-box;
+    box-shadow:0 3px 3px 2px black;
+    border-radius: 35px;
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.about-img img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 8px  15px rgba(38, 38, 38, 0.6);
+}
+
+
+.about-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.heading span {
+    color: #4caf50; /* Highlight color */
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 35px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-img {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .about-content {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .about-img {
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .about-content {
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+}
