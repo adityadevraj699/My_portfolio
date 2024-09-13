@@ -14,7 +14,7 @@ Detailed Project Sections: Showcases my projects with descriptions and visuals.
 Smooth Navigation: Easy-to-use interface for seamless browsing.
 Explore the project and see how these technologies come together in a real-world application.
 
-🔗 link : http://3.110.187.75:5173
+🔗 link :[ My-portfolio](http://13.201.157.70:5173/)
 
 Feel free to explore, contribute, or reach out if you have any questions!
 
